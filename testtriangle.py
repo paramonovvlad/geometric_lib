@@ -24,6 +24,7 @@ class TriangleTestCase(unittest.TestCase):
         h = 13
         with self.assertRaises(ValueError):
             area(a, h)
+            
     def test_negativenumbers(self):
         a = -9
         b = 10

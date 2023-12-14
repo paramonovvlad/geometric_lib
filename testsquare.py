@@ -11,6 +11,7 @@ class SquareTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             area(-7)
 
+
     def test_negativenumbers(self):
         with self.assertRaises(ValueError):
             area(-7)

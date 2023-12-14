@@ -7,6 +7,7 @@ class RectangleTestCase(unittest.TestCase):
     def test_int(self):
         self.assertEqual(perimeter(5,3),'error')
 
+
     def test_negativenumbers(self):
         with self.assertRaises(ValueError):
             area(-5, 3)
