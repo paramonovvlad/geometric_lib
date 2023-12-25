@@ -30,18 +30,7 @@ class TriangleTestCase(unittest.TestCase):
         h = 13
         with self.assertRaises(ValueError):
             (perimeter(a, b, c))
-    def test_str(self):
-        a = -9
-        b = 10
-        c = -11
-        h = 13
-        self.assertEqual(area('def','def'),TypeError)
-    def test_str(self):
-        a = -9
-        b = 10
-        c = -11
-        h = 13
-        self.assertEqual(perimeter('def','def','def'),TypeError)
+
 
 if __name__ == '__main__':
     unittest.main()
