@@ -1,0 +1,45 @@
+
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - cicd_409308
+  pull_request:
+    branches:
+      - cicd_409308
+
+jobs:
+  test-on-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repository clone
+        uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          architecture: x64
+      - name: Run tests
+        run: |
+          python -m unittest "testcircle.py"
+          python -m unittest "testrectangle.py"
+          python -m unittest "testsquare.py"
+          python -m unittest "testtriangle.py"
+          
+  test-on-windows:
+    runs-on: windows-latest
+    steps:
+      - name: repository clone
+        uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+          architecture: x64
+      - name: Run tests
+        run: |
+          python -m unittest "testcircle.py"
+          python -m unittest "testrectangle.py"
+          python -m unittest "testsquare.py"
+          python -m unittest "testtriangle.py"
