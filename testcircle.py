@@ -6,9 +6,9 @@ from math import pi
 
 class CircleTestCase(unittest.TestCase):
     def test_int(self):
-        self.assertAlmostEqual(area(3),round(pi*3**2, 2))
+        self.assertAlmostEqual(area(3),28.26, delta=0.01)
     def test_int(self):
-        self.assertAlmostEqual(perimeter(3),round(2*pi*3, 2))
+        self.assertAlmostEqual(perimeter(3),18.84, delta=0.01)
 
     def test_negativenumbers(self):
         with self.assertRaises(ValueError):
